@@ -25,6 +25,7 @@ public abstract class Datos extends RoomDatabase {
     public static Datos DB(Context context){
         if(INSTANCE == null){
             INSTANCE = Room.databaseBuilder( context, Datos.class, Utils.var.DATABASE_NAME)
+                    //.addMigrations(  )
                     .allowMainThreadQueries()
                     .build();
         }
